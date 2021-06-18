@@ -15,9 +15,7 @@ for (upper= 'A'; upper<= 'Z'; upper++)
 {
 putchar(upper);
 if(upper == 'Z')
-{
 putchar('\n');
-}
 }
 return (0);
 }
