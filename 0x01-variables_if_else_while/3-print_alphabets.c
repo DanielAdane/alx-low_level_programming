@@ -7,14 +7,14 @@
 int main(void)
 {
 char lower, upper;
-for (lower= 'a'; lower<= 'z'; lower++)
+for (lower = 'a'; lower <= 'z'; lower++)
 {
 putchar(lower);
 }
-for (upper= 'A'; upper<= 'Z'; upper++)
+for (upper = 'A'; upper <= 'Z'; upper++)
 {
 putchar(upper);
-if(upper == 'Z')
+if (upper == 'Z')
 putchar('\n');
 }
 return (0);
