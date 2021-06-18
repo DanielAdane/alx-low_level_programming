@@ -1,0 +1,1 @@
+This is learning about c variables, if, else and while
