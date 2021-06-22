@@ -7,10 +7,10 @@
  */
 int print_last_digit(int n)
 {
-int absNum;
 int res;
-absNum = _abs(n);
-res = absNum % 10;
-_putchar('0' + res);
-return (res);
+int absRes;
+res = n % 10;
+absRes = _abs(res);
+_putchar('0' + absRes);
+return (absRes);
 }
