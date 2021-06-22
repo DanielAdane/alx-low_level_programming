@@ -3,13 +3,13 @@
 int _putchar(char c);
 #endif
 
-#ifndef _PRINT_ALPHABET_HEADER
-#define _PRINT_ALPHABET_HEADER
+#ifndef _PRINT_ALPHABET
+#define _PRINT_ALPHABET
 int print_alphabet(void);
 #endif
 
-#ifndef _PRINT_ALPHABET_x10_HEADER
-#define _PRINT_ALPHABET_x10_HEADER
+#ifndef _PRINT_ALPHABET_x10
+#define _PRINT_ALPHABET_x10
 int print_alphabet_x10(void);
 #endif
 
@@ -46,4 +46,9 @@ void jack_bauer(void);
 #ifndef _TIMES_TABLE
 #define _TIMES_TABLE
 void times_table(void);
+#endif
+
+#ifndef _ADD
+#define _ADD
+int add(int, int);
 #endif
