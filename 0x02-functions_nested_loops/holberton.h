@@ -37,3 +37,8 @@ int _abs(int);
 #define _PRINT_LAST_DIGIT
 int print_last_digit(int n);
 #endif
+
+#ifndef _JACK_BAUER
+#define _JACK_BAUER
+void jack_bauer(void);
+#endif
