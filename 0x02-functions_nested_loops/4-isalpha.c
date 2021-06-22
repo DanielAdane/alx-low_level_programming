@@ -6,14 +6,14 @@
  */
 int _isalpha(int c)
 {
-    int res;
-    if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-    {
-        res = 1;
-    }
-    else
-    {
-        res = 0;
-    }
-    return (res);
+int res;
+if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+{
+res = 1;
+}
+else
+{
+res = 0;
+}
+return (res);
 }
