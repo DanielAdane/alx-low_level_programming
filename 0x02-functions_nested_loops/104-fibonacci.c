@@ -1,44 +1,44 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
- * main - program that finds and prints the first 98 Fibonacci numbers,
- * starting with 1 and 2, followed by a new line.
+ * main - Prints the first 98 Fibonacci numbers, starting with
+ *        1 and 2, separated by a comma followed by a space.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
-unsigned long int a, b, c, d, m, n, z;
-unsigned long int split1, split2, digit, thousand, cycl, limit;
-m = 1;
-n = 2;
-limit = 96;
-digit = 1000;
-printf("%lu, ", m);
-printf("%lu, ", n);
-for (cycl = 1; cycl <= 90; cycl++)
+int count;
+unsigned long fib1 = 0, fib2 = 1, sum;
+unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+unsigned long half1, half2;
+for (count = 0; count < 92; count++)
 {
-z = m + n;
-m = n;
-n = z;
-printf("%lu, ", z);
+sum = fib1 + fib2;
+printf("%lu, ", sum);
+fib1 = fib2;
+fib2 = sum;
 }
-a = m / digit, b = m % digit;
-c = n / digit, d = n % digit;
-for (cycl = 91; cycl <= limit; cycl++)
+fib1_half1 = fib1 / 10000000000;
+fib2_half1 = fib2 / 10000000000;
+fib1_half2 = fib1 % 10000000000;
+fib2_half2 = fib2 % 10000000000;
+for (count = 93; count < 99; count++)
 {
-thousand = (b + d) / digit;
-split1 = (a + c) +thousand;
-split2 = (b + d) - thousand *digit;
-a = c, b = d;
-c = split1, d = split2;
-if (split2 >= 100)
-printf("%lu%lu", split1, split2);
-else
-printf("%lu0%lu", split1, split2);
-if (cycl != limit)
+half1 = fib1_half1 + fib2_half1;
+half2 = fib1_half2 + fib2_half2;
+if (fib1_half2 + fib2_half2 > 9999999999)
+{
+half1 += 1;
+half2 %= 10000000000;
+}
+printf("%lu%lu", half1, half2);
+if (count != 98)
 printf(", ");
+fib1_half1 = fib2_half1;
+fib1_half2 = fib2_half2;
+fib2_half1 = half1;
+fib2_half2 = half2;
 }
-putchar('\n');
+printf("\n");
 return (0);
 }
