@@ -13,7 +13,7 @@ while (str[strCounter])
 strCounter++;
 halfStr = strCounter - (strCounter) / 2;
 }
-while (halfStr <= strCounter)
+while (halfStr <= strCounter - 1)
 {
 _putchar(str[halfStr]);
 halfStr++;
