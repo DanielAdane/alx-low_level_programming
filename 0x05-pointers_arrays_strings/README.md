@@ -1,0 +1,1 @@
+This is about learning arrays, pointers and strings of c programming language.
