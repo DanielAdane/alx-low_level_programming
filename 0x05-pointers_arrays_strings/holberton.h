@@ -1,3 +1,8 @@
+#ifndef _PUTCHAR
+#define _PUTCHAR
+int _putchar(char c);
+#endif
+
 #ifndef _RESET_TO_98
 #define _RESET_TO_98
 void reset_to_98(int *n);
@@ -11,4 +16,9 @@ void swap_int(int *a, int *b);
 #ifndef _STRLEN
 #define _STRLEN
 int _strlen(char *s);
+#endif
+
+#ifndef _PUTS
+#define _PUTS
+void _puts(char *str);
 #endif
