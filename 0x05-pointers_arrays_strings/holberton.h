@@ -37,3 +37,8 @@ void rev_string(char *s);
 #define _PUTS2
 void puts2(char *str);
 #endif
+
+#ifndef _PUTS_HALF
+#define _PUTS_HALF
+void puts_half(char *str);
+#endif
