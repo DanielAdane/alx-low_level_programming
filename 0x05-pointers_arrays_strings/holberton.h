@@ -52,3 +52,8 @@ void print_array(int *a, int n);
 #define _STRCPY
 char *_strcpy(char *dest, char *src);
 #endif
+
+#ifndef _ATOI
+#define _ATOI
+int _atoi(char *s);
+#endif
