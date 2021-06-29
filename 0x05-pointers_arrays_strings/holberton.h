@@ -22,3 +22,8 @@ int _strlen(char *s);
 #define _PUTS
 void _puts(char *str);
 #endif
+
+#ifndef _PRINT_REV
+#define _PRINT_REV
+void print_rev(char *s);
+#endif
