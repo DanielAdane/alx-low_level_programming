@@ -7,3 +7,8 @@ void reset_to_98(int *n);
 #define _SWAP_INT
 void swap_int(int *a, int *b);
 #endif
+
+#ifndef _STRLEN
+#define _STRLEN
+int _strlen(char *s);
+#endif
