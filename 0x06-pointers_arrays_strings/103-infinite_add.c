@@ -1,36 +1,59 @@
 #include "holberton.h"
 /**
- * infinite_add - function that adds two numbers.
- * @n1: Pointer to the first character of number 1
- * @n2: Pointer to the first character of number 2
- * @r: Buffer where to write the result
- * @n: Buffer size
- *
- * Return: Pointer.
- */
-char *infinite_add(char *n1, char *n2, char *r, int n)
+  * infinite_add - add two numbers
+  * @n1: first number
+  * @n2: second number
+  * @r: the buffer
+  * @size_r: the size of r
+  * Return: char
+  */
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int len1 = 0, len2 = 0;
-int add = 0;
-int i = n - 2;
-while (n1[len1 + 1] != 0)
-len1++;
-while (n2[len2 + 1] != 0)
-len2++;
-r[n - 1] = 0;
-while (i >= 0 && (len1 >= 0 || len2 >= 0))
+int i = 0;
+int j = 0;
+int count = 0;
+int digit = 0;
+unsigned int digitval;
+unsigned int value1 = 0;
+unsigned int value2 = 0;
+unsigned int value3 = 0;
+char *p = r;
+
+while (n1[i + 1])
 {
-add += (len1 < 0 ? '0' : n1[len1]) + (len2 < 0 ? '0' : n2[len2]);
-add -= 2 * '0';
-r[i] = add % 10 + '0';
-add /= 10;
-i--;
-len1--;
-len2--;
+n1++;
+i++;
 }
-if ((i < len1 || i < len2) || (i < 0 && add))
+while (i)
+{
+value1 += n1[i] - '0';
+i--;
+}
+while (n2[j + 1])
+{
+n2++;
+j++;
+}
+while (j)
+{
+value2 += n2[j - '0'];
+j--;
+}
+value3 = value1 + value2;
+digitval = value3;
+while (digitval / 10)
+{
+count += 1;
+digitval /= 10;
+}
+count += 1;
+if (count > size_r)
 return (0);
-add ? r[i] = add + '0' : 1;
-i += add ? 0 : 1;
-return (r + i);
+for (; count; count--)
+{
+digit = (value3 % 10);
+value3 = (value3 - digit);
+r[count] = digit + '0';
+}
+return (p);
 }
