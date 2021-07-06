@@ -1,0 +1,1 @@
+This is about learning even more on arrays, pointer and strings
