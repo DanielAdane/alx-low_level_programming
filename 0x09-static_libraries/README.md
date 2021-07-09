@@ -1,0 +1,1 @@
+This is about learning static libraries in c.
