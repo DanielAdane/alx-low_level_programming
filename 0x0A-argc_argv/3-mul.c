@@ -14,7 +14,7 @@ int n1;
 int n2;
 int result;
 if (argc != 3)
-	{
+{
 printf("Error\n");
 return (1);
 }
