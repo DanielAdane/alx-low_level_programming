@@ -68,7 +68,7 @@ if (str == NULL || _strlen(str) == 0)
 return (NULL);
 if (count_words(str) == 0)
 return (NULL);
-arr = (char **)malloc((count_words(str) + 1) *sizeof(char *));
+arr = (char **)malloc((count_words(str) + 1) * sizeof(char *));
 if (arr == NULL)
 return (NULL);
 for (i = 0; i < _strlen(str); i++)
@@ -77,7 +77,7 @@ if (str[i] != ' ')
 {
 for (k = i, temp_len = 0; str[k] != '\0' && str[k] != ' '; k++)
 temp_len++;
-arr[j] = (char *)malloc((temp_len + 1) *sizeof(char));
+arr[j] = (char *)malloc((temp_len + 1) * sizeof(char));
 if (arr[j] == NULL)
 {
 free_gridc(arr, k);

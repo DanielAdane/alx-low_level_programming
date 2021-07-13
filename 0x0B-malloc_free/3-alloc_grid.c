@@ -18,14 +18,14 @@ if (width <= 0 || height <= 0)
 {
 return (NULL);
 }
-ar = malloc(sizeof(int *) *height);
+ar = malloc(sizeof(int *) * height);
 if (ar  == NULL)
 {
 return (NULL);
 }
 for (i = 0; i < height; i++)
 {
-ar[i] = malloc(sizeof(int) *width);
+ar[i] = malloc(sizeof(int) * width);
 if (ar[i] == NULL)
 for (k = 0; k <= i; k++)
 {
