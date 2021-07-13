@@ -37,3 +37,9 @@ return (ptr);
 else
 return (NULL);
 }
+<<<<<<< HEAD
+=======
+str[size] = '\0';
+return (str);
+}
+>>>>>>> c7d85ad79a7d8270fa6dce2e12d45e7fa76b19b8
