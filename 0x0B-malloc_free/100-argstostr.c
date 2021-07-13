@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
  *argstostr - concatenates all the arguments of your program.
  *@ac: argc size double pointer
@@ -37,9 +36,3 @@ return (ptr);
 else
 return (NULL);
 }
-<<<<<<< HEAD
-=======
-str[size] = '\0';
-return (str);
-}
->>>>>>> c7d85ad79a7d8270fa6dce2e12d45e7fa76b19b8
